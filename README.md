@@ -2,7 +2,6 @@
 
 Este projeto é uma API REST desenvolvida em Java com Spring Boot para o gerenciamento de eventos e participantes. Ele permite o cadastro de eventos, inscrição de participantes, controle de vagas e organização das informações.
 
----
 
 ## 📌 Funcionalidades:
 
@@ -41,15 +40,26 @@ estrutura
    ```bash
    git clone https://github.com/Gestao-Eventos
    cd Back-End
-``
+   ```
 2. **Abra o eclipse IDE**
+
 3. **Execute o projeto**
    ```bash
    dê um "run as"
    1 Java Aplication
    ```
 
-##🔗 Endpoints
+## 🔗 Endpoints
+
+```
+| Pessoa   | Tarefa                                                                |
+| -------- | --------------------------------------------------------------------- |
+| Pessoa 1 | Configuração do projeto, Entidades, Relacionamentos                   |
+| Pessoa 2 | Repositórios, DTOs, Services, Lógica de inscrição com limite de vagas |
+| Pessoa 3 | Controllers (endpoints) e testes com Postman                          |
+| Pessoa 4 | Organização no GitHub, README.md, Acompanhamento de commits           |
+```
+
 
 
 
