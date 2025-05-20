@@ -26,10 +26,13 @@ estrutura
 
 ```
 
-## 👨‍💻 Tecnologias Usadas
+## 🚀 Tecnologias
 
-- Spring Boot
-- Validation
+- Java 21
 - Dev Tools
+- Spring Web
+- Validation
 - Spring Data JPA
+- MySQL
+- Maven
 
