@@ -39,6 +39,21 @@ estrutura
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/Gestao-Eventos/
+   git clone https://github.com/Gestao-Eventos
    cd Back-End
+``
+2. **Abra o eclipse IDE**
+3. **Execute o projeto**
+   ```bash
+   dê um "run as"
+   1 Java Aplication
+   ```
+
+##🔗 Endpoints
+
+
+
+
+
+   
 
