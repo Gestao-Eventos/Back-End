@@ -34,5 +34,11 @@ estrutura
 - Validation
 - Spring Data JPA
 - MySQL
-- Maven
+
+## 🔧 Como Executar o Projeto
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/Gestao-Eventos/
+   cd Back-End
 
