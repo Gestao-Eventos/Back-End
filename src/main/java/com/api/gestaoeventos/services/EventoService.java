@@ -2,6 +2,7 @@ package com.api.gestaoeventos.services;
 
 import java.util.List;
 
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,20 +12,22 @@ import com.api.gestaoeventos.repository.EventoRepository;
 
 @Service
 public class EventoService {
-	
-	@Autowired
-	 EventoRepository eventoRepository;
 
-	public List<EventoDTO> listarEventos(){
-		return eventoRepository.findAll().stream().map(EventoDTO::new).toList();
-	}
+    @Autowired
+    private EventoRepository eventoRepository;
 
+    public List<EventoDTO> listarEventos() {
+        return eventoRepository.findAll().stream().map(EventoDTO::new).toList();
+    }
+
+    @Transactional
     public EventoDTO criarEvento(EventoDTO eventoDTO) {
         Evento evento = new Evento(eventoDTO);
 
         return new EventoDTO(eventoRepository.save(evento));
     }
 
+    @Transactional
     public EventoDTO atualizarEvento(Long id, EventoDTO eventoDTO) {
         Evento evento = eventoRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Evento não encontrado."));
@@ -39,9 +42,10 @@ public class EventoService {
 
     }
 
+    @Transactional
     public void deletarEvento(Long id) {
         eventoRepository.deleteById(id);
     }
-	
-	
+
+
 }

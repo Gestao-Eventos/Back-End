@@ -7,7 +7,7 @@ import com.api.gestaoeventos.entity.Evento;
 import com.api.gestaoeventos.entity.Participante;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;Value;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
@@ -22,20 +22,20 @@ public class EventoDTO {
     @Column(nullable = false)
     @Size(max = 100, message = "O nome do local não deve ultrapassar 100 caracteres.")
     private String local;
-   
- 
+
+
     private Integer vagas;
-  
-   
+
+
     private LocalDate data;
-    
+
     public List<Long> participantes;
-    
-    
+
+
 	public EventoDTO() {
-		 
+
 	}
- 
+
 	public EventoDTO(String nome, String descricao, String local, Integer vagas, LocalDate data) {
 	 		this.nome = nome;
 		this.descricao = descricao;
@@ -44,7 +44,7 @@ public class EventoDTO {
 		this.data = data;
 	}
 	public EventoDTO(Evento evento) {
-		 
+
 		id = evento.getId();
 		nome = evento.getNome();
 		descricao = evento.getDescricao();
@@ -105,6 +105,6 @@ public class EventoDTO {
 		this.participantes = participantes;
 	}
 
-	
-	
+
+
 }
