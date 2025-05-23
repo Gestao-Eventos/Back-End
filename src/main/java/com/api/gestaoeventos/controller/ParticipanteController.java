@@ -1,4 +1,4 @@
-package controller;
+package com.api.gestaoeventos.controller;
 
 import com.api.gestaoeventos.dto.ParticipanteDTO;
 import com.api.gestaoeventos.services.ParticipanteService;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/participantes")
+@RequestMapping("participante")
 public class ParticipanteController {
 
 
@@ -21,13 +21,13 @@ public class ParticipanteController {
         return ResponseEntity.ok(participanteService.listarParticipante());
     }
 
-    @PostMapping
+    @PostMapping("/criar")
     public ResponseEntity<ParticipanteDTO> criar(@RequestBody ParticipanteDTO participanteDTO) {
         ParticipanteDTO novoParticipante = participanteService.criarParticipante(participanteDTO);
         return ResponseEntity.ok(novoParticipante);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/atualizar/{id}")
     public ResponseEntity<ParticipanteDTO> atualizar(
             @PathVariable Long id,
             @RequestBody ParticipanteDTO participanteDTO) {
@@ -35,7 +35,7 @@ public class ParticipanteController {
         return ResponseEntity.ok(participanteAtualizado);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/deletar/{id}")
     public ResponseEntity<Void> deletar(@PathVariable Long id) {
         participanteService.deletarParticipante(id);
         return ResponseEntity.noContent().build();

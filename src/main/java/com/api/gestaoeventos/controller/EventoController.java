@@ -1,4 +1,4 @@
-package controller;
+package com.api.gestaoeventos.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ public class EventoController {
     @GetMapping
     public ResponseEntity<List<EventoDTO>> listarTodos() {
         return ResponseEntity.ok(eventoService.listarEventos());
-    } 
+    }
 
     @PostMapping("/criar")
     public ResponseEntity<EventoDTO> criar(@RequestBody EventoDTO eventoDTO) {
